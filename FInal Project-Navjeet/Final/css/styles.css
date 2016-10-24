@@ -101,13 +101,22 @@ header nav ul li a {
 }
 
 h2{
-
    font-style: 800;
    font-size: 4em;
    width: 100%;
    text-align: center;
    color: #fff;
    padding-top: 28px;
+}
+
+h2#brewing{
+
+   font-style: 800;
+   font-size: 4em;
+   width: 100%;
+   text-align: center;
+   color: #fff;
+  
 }
 
 .fullscreenVid {
@@ -121,7 +130,7 @@ h2{
 }
 
 .fullscreen_frame {
-       position: fixed;
+    position: fixed;
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -136,9 +145,34 @@ h2{
     background: url(wallofbeer.jpg) no-repeat;
     background-size: cover; 
 }
+h2#brewing{
+  background: url(../images/brewing.jpg) no-repeat center center;
 
+}
 #hero .logo {
   color: #fff;
+}
+.main img{
+  width: 100%;
+  height: auto;
+}
+
+#beer-type {
+  color: #591616;
+  font-size: 24px;
+  background: #fff;
+  border: 1px solid #111;
+  padding: 0px 30px;
+  display: inline-block;
+  width: 320px;
+  margin-left: 37%;
+  margin-top: 3em;
+  font-family: 'Raleway', sans-serif;
+  height: 72px;
+  line-height: 74px;
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: #46588C 0 0 20px;
 }
 
 p{
@@ -151,8 +185,8 @@ p{
 }
 
 .copyright{
-  padding-top: 240px;
-  font-size: 1em;
+  padding-top: 3.5em;
+  font-size: .8em;
 }
 
 
