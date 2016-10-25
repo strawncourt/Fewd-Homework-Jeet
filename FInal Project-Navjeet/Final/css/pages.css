@@ -43,6 +43,7 @@ body {
   font-family: 'Amatic SC', cursive;
   font-weight: 300;
 }
+
 a {
   text-decoration: none;
 }
@@ -58,7 +59,6 @@ a {
   margin: 0 auto;
 }
 
-
 header {
   background: #D99923;
   padding: 25px 0;
@@ -66,8 +66,7 @@ header {
   overflow: hidden;
 }
 
-
-.line {
+.line{
     width: .5em;
     height: .2em;
     border: .2em solid yellow;
@@ -76,9 +75,11 @@ header {
     padding-right: 2em;
     margin-right: 1em;
 }
+
 .hamburger{
   display:none;
 }
+
 header nav {
   float: right;
   margin-top: 15px;
@@ -99,81 +100,37 @@ z-index: 10;
 margin-left: 100px;
 }
 
+span.brewTxt p{
+  font-size: 18px;
+  display: inline-block;
+  line-height: 2em;
+  text-align:left;
+  width: 40%;
+  font-family: 'Raleway', sans-serif;
+  padding-left: 8em; 
+  ;
+}
+
 h2{
    font-style: 800;
-   font-size: 4em;
+   font-size: 3em;
    width: 100%;
    text-align: center;
    color: #fff;
-   padding-top: 28px;
+   
+
 }
 
-.fullscreenVid {
-    opacity: 1;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -190;
-}
+h2#brewing{
+  background: url(../images/brewing.jpg) no-repeat center center;
+  height: 650px;
 
-.fullscreen_frame {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(wallofbeer.jpg) no-repeat;
-    background-size: cover; 
-}
-
-#hero .logo {
-  color: #fff;
 }
 
 
-#beer-type {
-  color: #591616;
-  font-size: 24px;
-  background: #fff;
-  border: 1px solid #111;
-  padding: 0px 30px;
-  display: inline-block;
-  width: 320px;
-  margin-left: 37%;
-  margin-top: 3em;
-  font-family: 'Raleway', sans-serif;
-  height: 72px;
-  line-height: 74px;
-  text-align: center;
-  vertical-align: middle;
-  box-shadow: #46588C 0 0 20px;
-}
 
-p{
-  text-align: center;
-  font-size: 2em;
-  color: #fff;
-}
-.container p {
-  padding-top: 25px;
-}
 
-.copyright{
-  padding-top: 3.5em;
+.copyright,p{
+  text-align:center;
   font-size: .8em;
 }
-
-
-
-
-
