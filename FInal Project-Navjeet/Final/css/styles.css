@@ -95,7 +95,7 @@ header nav ul li a {
 }
 img {
 position: absolute;
-z-index: 10;
+z-index: 100;
 margin-left: 100px;
 }
 
@@ -109,7 +109,7 @@ h2{
 }
 
 .fullscreenVid {
-    opacity: 1;
+    opacity: 50;
     position: fixed;
     top: 0;
     right: 0;
@@ -173,6 +173,32 @@ p{
   font-size: .8em;
 }
 
+.ale {
+  position: absolute;
+  z-index: 11;
+  background-image: url(../images/wallofbeer.jpg)
+}
+
+.belgian {
+  position: absolute;
+  z-index: 11;
+  background-image: url(../images/wallofbeer.jpg)
+}
+.IndiaPaleAle {
+  position: absolute;
+  z-index: 11;
+  background-image: url(../images/wallofbeer.jpg)
+}
+.ale {
+  position: absolute;
+  z-index: 11;
+  background-image: url(./images/br_logo.png)
+}
+.ale {
+  position: absolute;
+  z-index: 11;
+  background-image: url(/images/wallofbeer.jpg)
+}
 
 
 

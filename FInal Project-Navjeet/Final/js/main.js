@@ -32,22 +32,22 @@ $("select").change(function (stuff){
 //if else 
 	if($("#beer-type").val()==="Ale" ) {
 		console.log($("#beer-type").val())
-		$("body").attr("class","nyc");
+		$("source").attr("class","ale");
 		//$("body").css("background","url(./images/nyc.jpg");
-	}else if($("#beer-type").val()==="SF" ) {
+	}else if($("#beer-type").val()==="Belgian" ) {
 		console.log($("#beer-type").val())
 		$("body").attr("class","sf");
 		//$("body").css("background","url(./images/sf.jpg");
 	}else if($("#beer-type").val()==="LA" ) {
-		console.log($("#city-type").val())
+		console.log($("#beer-type").val())
 		$("body").attr("class","la");
 		//$("body").css("background","url(./images/la.jpg");
 	}else if($("#beer-type").val()==="ATX" ) {
-		console.log($("#city-type").val())
+		console.log($("#beer-type").val())
 		$("body").attr("class","austin");
 		//$("body").css("background","url(./images/austin.jpg");
 	}else if($("#beer-type").val()==="SYD" ) {
-		console.log($("#city-type").val())
+		console.log($("#beer-type").val())
 		$("body").attr("class","sydney");
 		//$("body").css("background","url(./images/sydney.jpg");
 	}
