@@ -32,11 +32,13 @@ $("select").change(function (stuff){
 //if else 
 	if($("#beer-type").val()==="Ale" ) {
 		console.log($("#beer-type").val())
-		$("source").attr("class","ale");
-		//$("body").css("background","url(./images/nyc.jpg");
-	}else if($("#beer-type").val()==="Belgian" ) {
+		//$(".fullscreen_frame").attr("class","ale");
+		$(".fullscreenVid").css("background","url(./images/br_logo.png");
+		
+		
+	}else if($("#beer-type").val()==="Ale" ) {
 		console.log($("#beer-type").val())
-		$("body").attr("class","sf");
+		///$("div.fullscreen_frame").attr("class","ale");
 		//$("body").css("background","url(./images/sf.jpg");
 	}else if($("#beer-type").val()==="LA" ) {
 		console.log($("#beer-type").val())

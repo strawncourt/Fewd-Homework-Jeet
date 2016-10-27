@@ -116,7 +116,7 @@ h2{
     bottom: 0;
     left: 0;
     overflow: hidden;
-    z-index: -190;
+    z-index: -100;
 }
 
 .fullscreen_frame {
@@ -132,7 +132,7 @@ h2{
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(wallofbeer.jpg) no-repeat;
+    
     background-size: cover; 
 }
 
@@ -159,6 +159,17 @@ h2{
   box-shadow: #46588C 0 0 20px;
 }
 
+.fullscreenImg{
+position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 100;
+}
+
 p{
   text-align: center;
   font-size: 2em;
@@ -176,7 +187,7 @@ p{
 .ale {
   position: absolute;
   z-index: 11;
-  background-image: url(../images/wallofbeer.jpg)
+  background-image: url(./images/wallofbeer.jpg)
 }
 
 .belgian {
