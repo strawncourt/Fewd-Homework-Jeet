@@ -6,9 +6,11 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Beer Run!</title>
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+		<link rel="stylesheet" href="css/MarkerCluster.css"/>
   		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  		<script src="js/leaflet.markercluster.js"></script>
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- linking to jQuery file -->
-  		<script src="main.js"></script>
+  		<script src="js/main.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
 
 		<!-- external CSS link -->
@@ -50,7 +52,6 @@
 		
 
   		<script>
-
   			// initialize the map
   			var map = L.map('map').setView([38.896496, -77.023219], 8);
 
@@ -73,18 +74,36 @@
 			//}).addTo(map);
 
   			// load GeoJSON from an external file
-  			$.getJSON(".js/brew.json",function(data){
+  			$.getJSON("js/brew.json",function(data){
+  				var beerIcon = L.icon({
+    				iconUrl: 'images/beer.svg',
+    				iconSize: [20,20]
+  					});
    			 // add GeoJSON layer to the map once the file is loaded
-   			L.geoJson(data).addTo(map);
-  			});
+   			var brewers = L.geoJson(data,{
+    		pointToLayer: function(feature,latlng){
+    		var marker = L.marker(latlng,{icon: beerIcon});
+  			marker.bindPopup(feature.properties.name + '<br/>' + feature.geometry.coordinates);
+  			return marker;
+	  		return L.marker(latlng,{icon: beerIcon});
+    		}
+  			}).addTo(map);
+  			var clusters = L.markerClusterGroup();
+			clusters.addLayer(brewers);
+				maxClusterRadius: 120
+			 	spiderfyOnMaxZoom:true
+    			showCoverageOnHover:true
+    			removeOutsideVisibleBounds:true
+    			animate:true
+			map.addLayer(clusters);
+  			console.log("addedtoMap");
+			})	
+
+
+			//////------> tryin this method for clustering
+			
 		</script>
 		
-		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-   
-		<script
-        src="http://code.jquery.com/jquery-3.1.1.js"
-        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-        crossorigin="anonymous"></script>
     	<script src="js/main.js"></script>
 	</body>
 

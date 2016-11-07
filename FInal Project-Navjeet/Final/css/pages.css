@@ -71,7 +71,7 @@ header {
     height: .2em;
     border: .2em solid yellow;
     margin-top: .2em;
-    border-radius: 5px;
+    border-radius: .25em;
     padding-right: 2em;
     margin-right: 1em;
 }
@@ -94,16 +94,17 @@ header nav ul li a {
   color: #46588C;
   font-family: 'Raleway', sans-serif;
 }
+div.grid-66{
+  background-color: rgba(70, 88, 140, 0.8);
+
+  border-radius:.25em;
+}
 img {
 position: absolute;
 z-index: 10;
 margin-left: 100px;
 margin-bottom: 50px;
-
 }
-
-
-
 
 span.brewTxt p{
   font-size: 18px;
@@ -124,25 +125,38 @@ h2{
    color: #fff;
    
 }
+#tt{
+   background: url(../images/wallofbeer.jpg) no-repeat center center;
+  height: 580px;
+  padding-top: 130px;
+  background-image: cover;
+
+}
 
 #hero{
   background: url(../images/brewing.jpg) no-repeat center center;
   height: 580px;
   padding-top: 10px;
-
 }
 
-
-
 p.cpy{
-  padding-top: 390px;
+  padding-top: 0px;
   text-align:center;
   font-size: .5em;
 }
+h3.txt2, h2.txt2{
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
 
+}
 fieldset {
+  margin-top: 50px;
   border: 0;
   margin: 24px 0;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
 }
 
 legend {
@@ -156,17 +170,21 @@ form div {
 
 label {
   display: block;
-  color: #94aab0;
-  margin-bottom: 10px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
 }
+
+
 
 input,
 textarea,
 select,
 label {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6em;
-  color: #2b3e51;
+  font-family: 'Raleway', sans-serif;
+  font-size: .5em;
+  color: #fff;
 }
 
 input[type="text"],
@@ -204,12 +222,22 @@ textarea {
   overflow: auto;
 }
 
+.side{
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  background-color: rgba(70, 88, 140, 0.8);
+  border-radius:.25em;
+  height: 298px;
+  padding: 50px;
+}
+
 input[type="submit"] {
   border: none;
   background: #2c97de;
   border-radius: .25em;
   padding: 16px 50px;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   float: right;
   cursor: pointer;
