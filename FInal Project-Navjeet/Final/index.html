@@ -3,16 +3,17 @@
 	<head>
     	<meta charset="utf-8">
     	<meta name="description" content="A tool for Beer">
-
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Beer Run!</title>
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
 
 		<!-- external CSS link -->
+		<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
-		<header>
+		<header class="content grid-100">
 			<div class="container">
 				<h1 class="logo"></h1>
 				<img src="images/br_logo.png" alt="Beer Run Logo" height="170px" width="170px">
@@ -22,48 +23,77 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 	</a>
-						<span class="NAV"><ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="brewing.html">Brewing</a></li>
-						<li><a href="#">Beer History</a></li>
-						<li><a href="#">Local Brewery's</a></li>
-					</ul></span>
+						<span class="NAV">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="brewing.html">Brewing</a></li>
+							<li><a href="history.html">Beer History</a></li>
+							<li><a href="local.html">Local Brewery's</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul></span>
 				</nav>
-				<div class="fullscreenImg"></div>
+				
 				<div class="fullscreenVid">
-    			<video loop muted autoplay poster="./images/wallofbeer.jpg" class="fullscreen_frame">
-        		<source src="video/beer_1.mp4" type="video/mp4">
-        		<source src="video/beermed.mp4" type="video/mp4">
-        		<source src="video/beer.mp4" type="video/mp4">
-    			</video>
+    				<video loop muted autoplay poster="./images/wallofbeer.jpg" class="fullscreen_frame">
+        			<source src="video/beer_1.mp4" type="video/mp4">
+    				</video>
 				</div>
 			</div>
 		</header>
-			<section id="hero">
-				<div class="container">
-				<h2>What do you wanna taste?</h2>
-				</div>
-			</section>
-		<section id="benefits">
-				<div class="container">
-				<p>Me thinks you feel thirsty! Am I right?
-				Am I right? Am I right?</p>
-				</div>
-				<div class="formcontainer">
-				<form>
-					<select id="beer-type">
-						<option>BEER ME!</option>
-					</select>
-				</form>
-			</div>
-		</section>
+					<section id="hero">
+						<div class="container">
+						<h2>What do you wanna taste?</h2>
+						<h3>Me thinks you feel thirsty! Am I right? Am I right? Am I right?</h3>
+						</div>
+					</section>
+					
+						<div class="formcontainer">
+							<form>
+								<select id="beer-type">
+									<option>BEER ME!</option>
+								</select>
+							</form>
+						</div>
+				
+					<div class="beertext">
+						<div class="aleText"><p>Ale is a type of beer brewed using a warm fermentation method, resulting in a sweet, full-bodied and fruity taste.[1][2] Historically, the term referred to a drink brewed without hops.As with most beers, ale typically has a bittering agent to balance the sweetness of the malt and act as a preservative. Ale was originally bittered with gruit, a mixture of herbs or spices boiled in the wort before fermentation. Later, hops replaced gruit as the bittering agent.</p></div>
+
+
+						<div class="bText"><p>Beer in Belgium varies from pale lager to lambic beer and Flemish red. There are approximately 180 breweries in the country,[1] ranging from international giants to microbreweries.On average, Belgians drink 84 litres of beer each year, down from around 200 each year in 1900. Most beers are bought or served in bottles, rather than cans, and almost every style of beer has its own particular, uniquely shaped glass or other drinking-vessel.Using the correct glass is considered to improve its flavor.</p></div>
+
+
+						<div class="ipaText"><p>In the 1790s, British brewer George Hodgson began to add more sugar to his pale ale. The increased sugar led to higher alcohol. The result was an ale more bitter than what folks were used to, and that was able to withstand the arduous trek to India. Any way you look at it, alcohol and hops are fine ingredients for fending off spoilage. The heavy-on-the hops recipe protected against "infection by wild yeasts,"Next time you hoist an IPA, think of the thirsty British sailors whose penchant for ale on arduous ship journeys helped foster, indirectly, this style.</p></div>
+
+
+						<div class="lagerText"><p>Lager (German: storeroom or warehouse) is a type of beer that is conditioned at low temperatures,[1] normally at the brewery. It may be pale, golden, amber, or dark.Although the defining feature of lager is its maturation in cold storage, it is also distinguished by the use of a specific yeast. While it is possible to use lager yeast in a warm fermentation process, such as with American steam beer, the lack of a cold storage maturation phase precludes such beer from being classified as lager.</p></div>
+
+
+						<div class="pilsnerText"><p>Pilsner (also pilsener, pilsen or simply pils) is a type of pale lager. It takes its name from the city of Pilsen, a city in Bohemia in the then-Austrian Empire, where it was first produced in 1842. Nowadays Pilsen is located in Czech Republic.[1] The world’s first-ever blond lager was the Pilsner Urquell,[2] making it the inspiration for more than two-thirds of the beer produced in the world today (which are still called pils, pilsner, and pilsener).[3] The original Pilsner Urquell beer is still produced there today.</p></div>
+
+
+						<div class="porterText"><p>Porter is a dark style of beer developed in London from well-hopped beers made from brown malt.The name was first recorded in the 18th century, and is thought to come from its popularity with street and river porters.
+						The history and development of stout and porter are intertwined.[4] The name "stout" as used for a dark beer is believed to have come about because strong porters were marketed under such names as "Extra Porter", "Double Porter", and "Stout Porter". The term "Stout Porter" would later be shortened to just "Stout".</p></div>
+
+
+						<div class="saisonText"><p>Saison French, "season," is a pale ale that is generally around 7% ABV, highly carbonated, fruity, spicy, and often bottle conditioned.As a beer style, saison began as a pale ale brewed in the cooler, less active months in farmhouses in Wallonia, the French-speaking region of Belgium, and stored for drinking in the summer months. These farmhouse beers would have been of a lower ABV than modern saisons—around 3 to 3.5% ABV on average, rising in the early 20th century to between 4.5 and 6.5% ABV.They were served to farm workers who were entitled to up to five litres each workday.</p></div>
+
+
+						<div class="sourText"><p>Sour beer is beer which has an intentionally acidic, tart or sour taste. The most common sour beer styles are Belgian: lambics, gueuze and Flanders red ale.At one time, all beers were sour to some degree. As pure yeast cultures were not available, the starter used from one batch to another usually contained some wild yeast and bacteria. Unlike modern brewing, which is done in a sterile environment to guard against the intrusion of wild yeast, sour beers are made by intentionally allowing wild yeast strains or bacteria into the brew.</p></div>
+
+
+						<div class="stoutText"><p>Stout is a dark beer made using roasted malt or roasted barley, hops, water and yeast. Stouts were traditionally the generic term for the strongest or stoutest porters, typically 7% or 8%, produced by a brewery. There are a number of variations including Baltic porter, milk stout, and imperial stout; the most common variation is dry stout, exemplified by Guinness Draught, the world's best selling stout.The first known use of the word stout for beer was in a document dated 1677 found in the Egerton Manuscript, the sense being that a stout beer was a strong beer not a dark beer.</p></div>
+
+					</div>
+					
+		
 		<footer>
 			<ul>
 				<li><a href="#"><img src="" alt=""></a></li>
 				<li><a href="#"><img src="" alt=""></a></li>
 			</ul>
-			<p class="copyright">Copyright 2016</p>
+				<p class="copyright grid-100">Copyright 2016</p>
 		</footer>
+		
 		<script
         src="http://code.jquery.com/jquery-3.1.1.js"
         integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="

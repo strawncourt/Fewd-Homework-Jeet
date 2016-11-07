@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="A tool for Beer">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Beer Run!</title>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- linking to jQuery file -->
+  		<script src="main.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive.css">
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/pagesH.css">
+			
+	</head>
+	<body>
+		<header class="content grid-100">
+			<div class="container">
+				<h1 class="logo"></h1>
+				<img src="images/br_logo.png" alt="Beer Run Logo" height="170px" width="170px">
+				
+
+				<nav>	
+					<a href="#" class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                	</a>
+						<span class="NAV"><ul>
+						<li><a href="index.html">Home</a></li>
+							<li><a href="brewing.html">Brewing</a></li>
+							<li><a href="history.html">Beer History</a></li>
+							<li><a href="local.html">Local Brewery's</a></li>
+							<li><a href="contact.html">Contact</a></li>
+					</ul></span>
+				</nav>
+			</div>
+		</header>
+		
+		<div class="mapArea">
+			<div id="map">
+				
+			</div>
+		</div>
+		
+
+  		<script>
+
+  			// initialize the map
+  			var map = L.map('map').setView([38.896496, -77.023219], 8);
+
+  			// load a tile layer
+  			////test
+  			//L.tileLayer.provider('MapBox', {id: 'mapbox.mapbox-streets-v7', accessToken: 'pk.eyJ1IjoiamVldGV5ZWpvZSIsImEiOiJjaXYybzZyd2wwMDh0MnRtdXI0d2VvY3BoIn0.ALpuOE2gXu1aSKazS9SFZQ'}).addTo(map);
+  			/////
+  			L.tileLayer('https://api.mapbox.com/styles/v1/jeeteyejoe/civ2vt1hg000j2ilnkc83ugqa/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamVldGV5ZWpvZSIsImEiOiJjaXYybzZyd2wwMDh0MnRtdXI0d2VvY3BoIn0.ALpuOE2gXu1aSKazS9SFZQ',
+    		{
+      		attribution: 'Tiles by <a href="http://mapbox.com</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+      		maxZoom: 18,
+      		minZoom: 8
+    		}).addTo(map);
+
+  			// bike lanes
+			//L.tileLayer('http://tiles.mapc.org/trailmap-onroad/{z}/{x}/{y}.png',
+			//{
+  			//maxZoom: 17,
+  			//minZoom: 9
+			//}).addTo(map);
+
+  			// load GeoJSON from an external file
+  			$.getJSON(".js/brew.json",function(data){
+   			 // add GeoJSON layer to the map once the file is loaded
+   			L.geoJson(data).addTo(map);
+  			});
+		</script>
+		
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+   
+		<script
+        src="http://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous"></script>
+    	<script src="js/main.js"></script>
+	</body>
+
+
+</html>
+

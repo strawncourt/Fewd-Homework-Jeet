@@ -42,7 +42,12 @@ body {
   color: #606161;
   font-family: 'Amatic SC', cursive;
   font-weight: 300;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 a {
   text-decoration: none;
 }
@@ -54,10 +59,8 @@ a {
 
 /* Center the container */
 .container {
-  width: 100%;
   margin: 0 auto;
 }
-
 
 header {
   background: #D99923;
@@ -65,7 +68,6 @@ header {
   height: 120px;
   overflow: hidden;
 }
-
 
 .line {
     width: .5em;
@@ -76,47 +78,64 @@ header {
     padding-right: 2em;
     margin-right: 1em;
 }
+
 .hamburger{
   display:none;
 }
+
 header nav {
   float: right;
   margin-top: 15px;
+
 }
+
 header nav ul li {
   display: inline-block;
-  margin: 0 0 0 100px;
-  font-size: 24px;
+  margin: 0 0 0 70px;
+  font-size: 20px;
   padding-right: 2em;
+
 }
+
 header nav ul li a {
   color: #46588C;
   font-family: 'Raleway', sans-serif;
 }
+
 img {
-position: absolute;
+position: fixed;
 z-index: 100;
 margin-left: 100px;
 }
 
 h2{
-   font-style: 800;
-   font-size: 4em;
-   width: 100%;
-   text-align: center;
+   font-style: bold;
+   font-size: 3em;
    color: #fff;
    padding-top: 28px;
+   text-align: center;
+   z-index: -98;
+   position: relative;
 }
 
+h3{
+   font-size: 1em;
+   color: #fff;
+   padding-top: 28px;
+   text-align: center;
+    z-index: -98;
+    position: relative;
+}
+
+
 .fullscreenVid {
-    opacity: 50;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     overflow: hidden;
-    z-index: -100;
+    z-index: -99;
 }
 
 .fullscreen_frame {
@@ -127,21 +146,18 @@ h2{
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
+    z-index: -99;
     -ms-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    
     background-size: cover; 
 }
 
-#hero .logo {
-  color: #fff;
-}
 
 
 #beer-type {
+  position: fixed;
   color: #591616;
   font-size: 24px;
   background: #fff;
@@ -159,57 +175,193 @@ h2{
   box-shadow: #46588C 0 0 20px;
 }
 
-.fullscreenImg{
-position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 100;
-}
 
-p{
-  text-align: center;
-  font-size: 2em;
+.containerLower p {
   color: #fff;
-}
-.container p {
-  padding-top: 25px;
+  font-size: 1em;
+  text-align: center;
 }
 
 .copyright{
-  padding-top: 3.5em;
   font-size: .8em;
+  color: #fff;
+  text-align: center;
 }
 
 .ale {
-  position: absolute;
-  z-index: 11;
-  background-image: url(./images/wallofbeer.jpg)
+  background:url("../images/ale.jpg") no-repeat center center fixed; 
+  background-size: cover;
+}
+
+.beertext{
+  visibility: hidden;
+}
+
+
+.aleText{
+visibility: hidden;
+font-family:'Raleway',sans-serif;
+font-size: 12px;
+margin-top: 180px;
+margin-left: 30%;
+padding: 10px;
+color: #fff;
+width: 40%;
+background-color: rgba(70, 88, 140,0.5);
+z-index: 199;
+position: relative;
 }
 
 .belgian {
-  position: absolute;
-  z-index: 11;
-  background-image: url(../images/wallofbeer.jpg)
+  background:url("../images/belgian.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
+
+.bText{
+visibility: hidden;
+font-family:'Raleway', sans-serif;
+font-size: 12px;
+margin-top: -100px;
+margin-left: 30%;
+padding: 10px;
+color: #fff;
+z-index: 199;
+position: relative;
+width: 40%;
+background-color: rgba(70, 88, 140,0.5);
+}
+
 .IndiaPaleAle {
-  position: absolute;
-  z-index: 11;
-  background-image: url(../images/wallofbeer.jpg)
+background:url("../images/ipa.jpg") no-repeat center center;
 }
-.ale {
-  position: absolute;
-  z-index: 11;
-  background-image: url(./images/br_logo.png)
+
+.ipaText{
+visibility: hidden;
+font-family:'Raleway', sans-serif;
+font-size: 12px;
+margin-top: -100px;
+margin-left: 30%;
+padding: 10px;
+color: #fff;
+z-index: 199;
+position: relative;
+width: 40%;
+background-color: rgba(70, 88, 140,0.8);
 }
-.ale {
-  position: absolute;
-  z-index: 11;
-  background-image: url(/images/wallofbeer.jpg)
+
+.lager{
+  background:url("../images/lager.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
+
+.lagerText{
+visibility: hidden;
+font-family:'Raleway', sans-serif;
+font-size: 12px;
+margin-top: -100px;
+margin-left: 30%;
+padding: 10px;
+color: #fff;
+z-index: 199;
+position: relative;
+width: 40%;
+background-color: rgba(70, 88, 140,0.8);
+}
+
+.pilsner{
+  background:url("../images/pilsner.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.pilsnerText{
+visibility: hidden;
+font-family:'Raleway', sans-serif;
+font-size: 12px;
+margin-top: -100px;
+margin-left: 30%;
+padding: 10px;
+color: #fff;
+z-index: 199;
+position: relative;
+width: 40%;
+background-color: rgba(70, 88, 140,0.5);
+}
+
+.porter{
+  background:url("../images/porter.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.porterText{
+visibility: hidden;
+font-family:'Raleway', sans-serif;
+font-size: 12px;
+margin-top: -100px;
+margin-left: 30%;
+padding: 10px;
+color: #fff;
+z-index: 199;
+position: relative;
+width: 40%;
+background-color: rgba(70, 88, 140,0.5);
+}
+
+.saison {
+background:url("../images/siason.jpg") no-repeat center center fixed;
+background-size: cover;
+}
+
+.saisonText{
+visibility: hidden;
+font-family:'Raleway', sans-serif;
+font-size: 12px;
+margin-top: -100px;
+margin-left: 30%;
+padding: 10px;
+color: #fff;
+z-index: 199;
+position: relative;
+width: 40%;
+background-color: rgba(70, 88, 140,0.5);
+}
+
+.sour {
+background:url("../images/sour.jpg") no-repeat center center fixed;
+background-size: cover;
+}
+
+.sourText{
+visibility: hidden;
+font-family:'Raleway', sans-serif;
+font-size: 12px;
+margin-top: -100px;
+margin-left: 30%;
+padding: 10px;
+color: #fff;
+z-index: 199;
+position: relative;
+width: 40%;
+background-color: rgba(70, 88, 140,0.5);
+}
+
+.stout {
+background:url("../images/stout.jpg") no-repeat center center fixed;
+}
+
+.stoutText{
+visibility: hidden;
+font-family:'Raleway', sans-serif;
+font-size: 12px;
+margin-top: -100px;
+margin-left: 30%;
+padding: 10px;
+color: #fff;
+z-index: 199;
+position: relative;
+width: 40%;
+background-color: rgba(70, 88, 140,0.5);
+}
+
 
 
 
