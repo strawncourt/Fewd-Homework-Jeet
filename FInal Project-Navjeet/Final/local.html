@@ -5,9 +5,11 @@
     	<meta name="description" content="A tool for Beer">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Beer Run!</title>
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="js/leaflet.markercluster-src.js"></script>
 		<link rel="stylesheet" href="css/MarkerCluster.css"/>
-  		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   		<script src="js/leaflet.markercluster.js"></script>
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- linking to jQuery file -->
   		<script src="js/main.js"></script>
@@ -88,14 +90,16 @@
 	  		return L.marker(latlng,{icon: beerIcon});
     		}
   			}).addTo(map);
-  			var clusters = L.markerClusterGroup();
-			clusters.addLayer(brewers);
-				maxClusterRadius: 120
-			 	spiderfyOnMaxZoom:true
-    			showCoverageOnHover:true
-    			removeOutsideVisibleBounds:true
-    			animate:true
-			map.addLayer(clusters);
+  			var markers = L.markerClusterGroup();
+
+			markers.addLayer(brewers);
+			map.addLayer(markers);
+				//maxClusterRadius: 10
+			 	//spiderfyOnMaxZoom:true
+    			//showCoverageOnHover:true
+    			//removeOutsideVisibleBounds:true
+    			//animate:true
+			
   			console.log("addedtoMap");
 			})	
 

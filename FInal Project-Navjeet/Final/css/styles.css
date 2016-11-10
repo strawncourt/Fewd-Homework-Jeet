@@ -67,20 +67,25 @@ header {
   padding: 25px 0;
   height: 120px;
   overflow: hidden;
+  
 }
 
-.line {
-    width: .5em;
-    height: .2em;
-    border: .2em solid yellow;
-    margin-top: .2em;
-    border-radius: 5px;
+div.line {
+    width: 5px;
+    height: .1em;
+    border: .1em solid white;
+    margin-top: .1em;
+    border-radius: 2px;
     padding-right: 2em;
     margin-right: 1em;
 }
 
 .hamburger{
   display:none;
+}
+
+.horizontal-nav li{
+    display: inline-block;
 }
 
 header nav {
@@ -362,7 +367,97 @@ width: 40%;
 background-color: rgba(70, 88, 140,0.5);
 }
 
+@media only screen and (max-width: 420px) {
+    .container {
+        width: 100%;
+    }
 
+    ul{
+      display: none;
+        padding: 5px;
+    }
+
+    img {
+        float: left;
+        width: 122px;
+        height: 125px;
+        margin-left:3%;
+       
+    }
+
+    .navigation {
+        display: block;
+        width: 100%;
+        float: none;
+        text-align: center;
+        clear: both;
+        padding-top: .25em;
+    }
+
+    .horizontal-nav li{
+        display: block;
+        font-size: 54px;
+    }
+
+    .main-nav li {
+        margin-right: 0;
+    }
+
+    .hamburger {
+        display: inline-block;
+        float: right;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+div.container{
+  width: 100%
+}
+
+body{
+  width: 100%
+}
+
+select#beer-type{
+
+  color: #591616;
+  font-size: 16px;
+  background: #fff;
+  border: 1px solid #111;
+  padding: 0px 15px;
+  display: inline-block;
+  width: 250px;
+  margin-top: 3em;
+  font-family: 'Raleway', sans-serif;
+  height: 50px;
+  line-height: 74px;
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: #46588C 0 0 20px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+h2{
+   font-style: bold;
+   font-size: 1.6em;
+   color: #fff;
+   padding-top: 28px;
+   text-align: center;
+   z-index: -98;
+   position: relative;
+}
+
+h3{
+   font-size: .7em;
+   color: #fff;
+   padding-top: 28px;
+   text-align: center;
+    z-index: -98;
+    position: relative;
+}
+
+}
 
 
 

@@ -1,5 +1,11 @@
 $(document).ready(function(){
 	console.log("helloworldnew")
+
+
+ $(".hamburger").click(function() {
+        $(".horizontal-nav").slideToggle();
+        console.log("clickednav");
+    });	
 //set a variable to be total
 
 // created array 
